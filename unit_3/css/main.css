@@ -1,0 +1,45 @@
+body {
+	background-image: url("../images/brunch2.jpg");
+	background-size: cover;
+	background-position: top;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+	padding-right: 80px;
+	padding-left: 500px;
+}
+
+#slogan {
+	font-style: italic;
+	font-weight: 600;
+	font-size: 22px;
+	color: white;
+}
+
+h1,p,h2,li {
+	color: white;
+	background: rgba(0,0,0,0.8);
+}
+
+p {
+	font-size: 18px;
+	font-weight: 100;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-weight: 200;
+	font-size: 36px;
+	color: #FF83DB;
+}
+
+h2 {
+	font-weight: 800;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+li {
+	line-height: 1.5;
+	text-align: left;
+	padding-left: 40px;
+}
