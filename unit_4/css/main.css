@@ -1,19 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif|Montserrat");
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans:300');
 
 body {
 	background-image: url("../images/brunch2.JPG");
 	background-size: cover;
 	background-position: top;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	padding-right: 80px;
 	padding-left: 500px;
 }
 
 #slogan {
-	font-style: italic;
 	font-weight: 600;
 	font-size: 22px;
 	color: white;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1,p,h2,li {
@@ -24,6 +25,7 @@ h1,p,h2,li {
 p {
 	font-size: 18px;
 	font-weight: 100;
+	margin: 1.5em;
 }
 
 h1 {
@@ -31,17 +33,20 @@ h1 {
 	font-weight: 200;
 	font-size: 36px;
 	color: #FF83DB;
-	font-family: 'Montserrat', Helvetica, sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h2 {
 	font-weight: 800;
-	font-size: 16px;
-	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Montserrat', sans-serif;
+	text-align: left;
+	padding-left: 40px;
+	margin: 1.5em.;
 }
 
 li {
-	line-height: 1.5;
 	text-align: left;
 	padding-left: 40px;
+	margin: 1.5em;
 }
