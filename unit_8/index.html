@@ -13,15 +13,15 @@
 	<a href="#publications">Publications</a>
 	<a href="#footer">Contact</a>
 </nav>
-<div class="clearfix"></div>
+<div class="clearfix" id="blankspace"></div>
 <div class="wrapper">
 <section class="clearfix">
-	<header>
+	<header class="clearfix">
 		<div class="circular--portrait">
 			<img src="images/headshotsquare.jpg" alt="Headshot of Brittany">
 		</div>
 		<h1>Brittany Betteridge</h1>
-		<p>Brittany is a human geographer with a passion for examining the impact of policy on people's lives. She has particular interests in disaster resilliance, urban environments and Indonesia. Brittany is currently completing her honours year, and is looking for full-time work for 2018.</p>
+		<h4>Brittany is a human geographer with a passion for examining the impact of policy on people's lives. She has particular interests in disaster resilliance, urban environments and Indonesia. Brittany is currently completing her honours year, and is looking for full-time work for 2018.</h4>
 	</header>
 	<section id="education1">
 		<h1>Education</h1>
@@ -87,7 +87,7 @@
 </section>
 
 <section id="publications" class="clearfix">
-	<h1>Publications</h1>
+	<h1><span>Publications</span></h1>
 	<h2><span><a href="http://www.cifor.org/library/6385/lessons-for-multi-level-redd-benefit-sharing-from-revenue-distribution-in-extractive-resource-sectors-oil-gas-and-mining/">Lessons for multi-level REDD+ benefit-sharing from revenue distribution in extractive resource sectors (oil, gas and mining)</a></span></h2>
 	<h3>CIFOR: Mar 24, 2017.</h3>
 
@@ -113,10 +113,43 @@
 	</div>
 </section>
 </div>
-<footer>
+<footer><a name="footer">
 	<h1>Contact me</h1>
 </footer>
+
 <script type="text/javascript">
-	$(function() {   $('a[href*="#"]:not([href="#"])').click(function() {     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {       var target = $(this.hash);       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');       if (target.length) {         $('html, body').animate({           scrollTop: target.offset().top         }, 1000);         return false;       }     }   }); });</script>
+	// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { 
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); 
+            $target.focus(); 
+          };
+        });
+      }
+    }
+  });
+</script>
+
 </body>
 </html>
